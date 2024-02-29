@@ -4,6 +4,9 @@
   html {
     padding: 40px;
     font-size: 62.5%;
+    background: linear-gradient(45deg, #FC466B, #3F5EFB);
+    background-size: cover;
+
   }
   
 
@@ -12,8 +15,7 @@ body {
 
     font-size: 15px;
     color: white;
-    background: linear-gradient(45deg, #FC466B, #3F5EFB);
-    height: 100vh;
+    
     font-family: "Montserrat", sans-serif;
 }
 
@@ -208,6 +210,9 @@ body {
     }
   }
   @media (min-width: 720px) {
+    html{
+      height: 100vh;
+    }
     table {
       display: table;
     }

@@ -4,16 +4,25 @@
 *:after {
   box-sizing: border-box;
 }
+html{
+  background: linear-gradient(45deg, #FC466B, #3F5EFB);
+  background-size: cover;
+}
 body {
     padding: 1em;
 
     font-size: 15px;
     color: #b9b9b9;
-    background: linear-gradient(45deg, #FC466B, #3F5EFB);
-    height: 100vh;
+    
     font-family: "Montserrat", sans-serif;
 }
 h4 {
+  color: #f0a500;
+}
+h3 {
+  color: #f0a500;
+}
+label{
   color: #f0a500;
 }
 input,
@@ -174,9 +183,12 @@ select option {
   transition: 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
+.separador{
+  padding: 2em 3em 2em 3em;
+}
 .container {
   max-width: 38em;
-  padding: 1em 3em 2em 3em;
+  
   margin: 0em auto;
   backdrop-filter: blur(15px);
   background-color: rgba(255, 255, 255, 0.15);
@@ -212,21 +224,45 @@ select option {
   padding-right: 0;
 }
 
-form input[type=button] {
+.boton {
     margin-top: 10px;
     width: 150px;
     font-size: 1rem;
     float: right;
 }
-form input[type=button]:hover {
+.boton:hover {
     cursor: pointer;
 }
-form input[type=button]:active {
+.boton:active {
     background: rgba(255, 255, 255, 0.2);
 }
 form input:hover {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input:hover {
+  background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input{
+  background: transparent;
+
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 form input {
     background: transparent;
@@ -245,6 +281,51 @@ form input {
     font-weight: 500;
     transition: all 0.2s ease-in-out;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*modal*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*Errores*/
+.error{
+  color: red;
+  visibility: hidden;
 }
 
 

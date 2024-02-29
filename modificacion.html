@@ -4,57 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificación</title>
-    <link rel="stylesheet" href="./css/estiloModificacion.css">
+    <link rel="stylesheet" href="./css/estiloInsercion.css">
     <link rel="shorcut icon" href="./img/faviconCrud.png" type="image/x-icon">
 </head>
 <body>
-
     <div class="container">
-        <form>
+        <div class="separador">
+        <form action="" method="post" onsubmit="return validacion()">
             <div class="row">
-                <h4>Account</h4>
-                <div class="input-group input-group-icon">
-                    <input type="text" placeholder="Iacob Geaorgescu"/>
-                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                <h3>Editar:</h3>
+                
+                <div class="input-group">
+                    <label for="usuario">Usuario: <span class="error">*</span></label>
+                    <input onchange="resetear('usuario')" value="Alf" placeholder="Usuario" type="text"  id="usuario" name="usuario" aria-describedby="usuarioHelp">
+                    <div id="usuarioHelp" class="error">Usuario obligatorio</div>
                 </div>
-                <div class="input-group input-group-icon">
-                    <input type="email" placeholder="e-mail@test-email.com"/>
-                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
+
+                <div class="input-group">
+                    <label for="nombre">Nombre: <span class="error">*</span></label>
+                    <input onchange="resetear('nombre')" value="Alfredo Garcia" placeholder="Nombre" type="text"  id="nombre" name="nombre" aria-describedby="nombreHelp">
+                    <div id="nombreHelp" class="error">Nombre obligatorio</div>
                 </div>
-                <div class="input-group input-group-icon">
-                    <input type="password" placeholder="********"/>
-                    <div class="input-icon"><i class="fa fa-key"></i></div>
+
+
+                <div class="input-group">
+                    <label for="numContacto">Número de contacto: <span class="error">*</span></label>
+                    <input onchange="resetear('numContacto')" value="637586234" placeholder="Número de contacto" type="text" id="numContacto" name="numContacto" aria-describedby="numContactoHelp">
+                    <div id="numContactoHelp" class="error">Número de contacto obligatorio</div>
                 </div>
+
+
+                <div class="input-group">
+                    <label for="numLocalizador">Número localizador<span class="error">*</span></label>
+                    <input onchange="resetear('numLocalizador')" value="1/11" placeholder="Ejemplo: 1/01" type="text" id="numLocalizador" name="numLocalizador" aria-describedby="numLocalizadorHelp">
+                    <div id="numLocalizadorHelp" class="error">Formato (1-9)/(01-29)</div>
                 </div>
-                <div class="row">
-                <div class="col-half">
-                    <h4>Date of Birth</h4>
+
+
+                <div class="input-group">
+                    <label for="email">Email: <span class="error">*</span></label>
+                    <input onchange="resetear('email')" type="text" value="e-mail@test-email.com" placeholder="Dirección email" id="email" name="email" aria-describedby="emailHelp"/>
+                    <div id="emailHelp" class="error">Formato de email erróneo</div>
+                </div>
+
+                
+                <div class="input-group">
+                    <h4>Tipo</h4>
                     <div class="input-group">
-                        <div class="col-third">
-                            <input type="text" placeholder="23"/>
-                        </div>
-                        <div class="col-third">
-                            <input type="text" placeholder="05"/>
-                        </div>
-                        <div class="col-third">
-                            <input type="text" placeholder="1987"/>
-                        </div>
+                        <input id="profesor" type="radio" name="tipo" value="profesor" onchange="resetear('tipo')" checked/>
+                        <label for="profesor">Profesor</label>
+
+                        <input id="estudiante" type="radio" name="tipo" value="estudiante" onchange="resetear('tipo')"/>
+                        <label for="estudiante">Estudiante</label>
                     </div>
+                    <div id="tipoHelp" class="error">Elija tipo</div>
                 </div>
-                <div class="col-half">
-                    <h4>Gender</h4>
-                    <div class="input-group">
-                        <div class="input-group input-group-icon">
-                            <input type="gender" placeholder="Male"/>
-                            <div class="input-icon"><i class="fa fa-key"></i></div>
-                        </div>
-                    </div>
+
+                <div class="input-group">
+                    <label for="provincia">Provincia: </label>
+                    <div id="provinciaHelp" class="error">Seleccione provincia</div>
+                    <select onchange="resetear('provincia')" class="input" aria-label="provinciaHelp" id="provincia" name="provincia">
+                      <option value="0">-- elige provincia</option>
+                      <option value="29" selected>Málaga</option>
+                      <option value="18">Granada</option>
+                      <option value="4">Almería</option>
+                    </select>
                 </div>
-                <input type="button" value="Confirm"><br>
+
+                <div class="form-check input-group">
+                    <input type="checkbox" onchange="resetear('terminos')" class="form-check-input" id="terminos" checked>
+                    
+                    <label class="form-check-label" for="terminos">
+                        <a id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Acepto los términos y condiciones</a>
+                    </label>
+                    
+                    <div id="terminosHelp" class="error">Debe aceptar</div>
+                </div>
+                <button type="submit" class="boton input">Submit</button>
+
             </div>
         </form>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, inventore unde nesciunt omnis quas odio. Consequatur sapiente et libero! Quod asperiores expedita doloribus quisquam consectetur vitae optio nostrum id sapiente.
+                Ab repudiandae perspiciatis atque voluptates nulla totam suscipit consectetur, fugiat sit rerum vitae harum eum nobis architecto nostrum dicta modi aperiam magni aliquid maxime voluptate nemo! Dolor voluptates quas provident?
+                Pariatur vel repudiandae deleniti nisi quidem dolorum similique unde incidunt assumenda dolorem. Incidunt sed impedit quo ad expedita perferendis a ut excepturi. Unde quasi itaque aliquam vero esse aspernatur odit?</p>
+            </div>
+
+        </div>
+
         
     </div>
+
+    <script src="./js/insercionjs.js"></script>
     
 </body>
 </html>

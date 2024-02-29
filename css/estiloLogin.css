@@ -3,6 +3,52 @@
 /* archivos insercion, listado, login, modificacion   */
 /*  autor: Juan Francisco Chacon Macias               */
 /******************************************************/
+/*Error*/
+/*Errores*/
+.error{
+  color: red;
+  visibility: hidden;
+  margin-bottom: 5px;
+}
+
+/*Botón*/
+.boton {
+  margin-top: 10px;
+  width: 85%;
+  font-size: 1rem;
+
+}
+.boton:hover {
+  cursor: pointer;
+}
+.boton:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.input:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input{
+  background: transparent;
+
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
 
 /*Login***************************************************************/
@@ -22,7 +68,7 @@ body {
   form {
     background: rgba(255, 255, 255, 0.3);
     padding: 3em;
-    height: 320px;
+    height: 400px;
     border-radius: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -75,23 +121,22 @@ body {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
   }
-  form input[type=email]:focus, form input[type=password]:focus {
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
-  }
-  form input[type=button] {
-    margin-top: 10px;
-    width: 150px;
-    font-size: 1rem;
-  }
-  form input[type=button]:hover {
-    cursor: pointer;
-  }
-  form input[type=button]:active {
-    background: rgba(255, 255, 255, 0.2);
-  }
+  
+  
   form:hover {
     margin: 4px;
+  }
+
+  .row {
+    zoom: 1;
+  }
+  .row:before,
+  .row:after {
+    content: "";
+    display: table;
+  }
+  .row:after {
+    clear: both;
   }
   
   ::-moz-placeholder {

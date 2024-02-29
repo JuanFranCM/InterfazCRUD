@@ -12,12 +12,27 @@
   <body>
 
     <div class="container">
-      <form >
-        <p>Welcome</p>
-        <input type="email" placeholder="Email"><br>
-        <input type="password" placeholder="Password"><br>
-        <input type="button" value="Sign in"><br>
-        <a href="#">Forgot Password?</a>
+      <form action="" method="post" onsubmit="return validacion()" >
+
+        <div class="row">
+          <p>Welcome</p>
+          <div class="input-group">
+            <div id="usuarioHelp" class="error">Formato de usuario erróneo</div>
+            <label for="usuario"><span class="error">*</span></label>
+            <input onchange="resetear('usuario')" value="" type="text" placeholder="Usuario" id="usuario" name="usuario" aria-describedby="usuarioHelp"/>
+            
+          </div>
+
+          <div class="input-group">
+            <div id="passwordHelp" class="error">Contraseña no válida</div>
+            <label for="password"><span class="error">*</span></label>
+            <input onchange="resetear('password')" value="" type="password" placeholder="Password" id="password" name="password" aria-describedby="passwordHelp"/>
+            
+          </div>
+
+          <button type="submit" class="boton input">Sign in</button>
+          <a href="#">Forgot Password?</a>
+        </div>
       </form>
     
       <div class="drops">
@@ -28,6 +43,8 @@
         <div class="drop drop-5"></div>
       </div>
     </div>
+
+    <script src="./js/loginjs.js"></script>
 
   </body>
 
