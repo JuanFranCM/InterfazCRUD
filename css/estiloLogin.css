@@ -205,14 +205,15 @@ form:hover {
   height: 100px;
   width: 100px;
   bottom: 120px;
-  right: -50px;
+  right: -30px;
   z-index: -1;
 }
 .drop-4 {
   height: 120px;
   width: 120px;
   top: -60px;
-  right: -60px;
+  right: -20px;
+  z-index: -1;
 }
 .drop-5 {
   height: 60px;
