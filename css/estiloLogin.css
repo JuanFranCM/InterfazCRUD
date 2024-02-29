@@ -57,6 +57,7 @@
 body {
   background: linear-gradient(45deg, #FC466B, #3F5EFB);
   background-size: cover;
+  size: 200%;
 
   font-family: "Montserrat", sans-serif;
 }
