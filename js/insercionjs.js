@@ -28,9 +28,7 @@ window.onclick = function(event) {
 }
 
 /************** Validaciones *************/
-/**recordatorio para el jf de mañana, 
- * a parte corregir el de email y arreglar fondo
- */
+
 function validacion(){
   let nombre = document.getElementById('nombre').value;
   let usuario = document.getElementById('usuario').value;
@@ -46,12 +44,14 @@ function validacion(){
 
   if(usuario==""){
     document.getElementById('usuarioHelp').style.visibility="visible";
+    document.getElementById('usuarioMarca').style.visibility="visible";
     correcto = false;
   }
 
   //Longitud mínima de 2 especificado en !/[a-zñ]{2,}/i.test(nombre))
   if (nombre==""|| /[0-9]/.test(nombre) || !/[a-zñ]{2,}/i.test(nombre)){
     document.getElementById('nombreHelp').style.visibility="visible";
+    document.getElementById('nombreMarca').style.visibility="visible";
     correcto = false;
       
   }
@@ -59,18 +59,22 @@ function validacion(){
   //Formato de 9 dígitos numéricos
   if(numContacto=="" || !/[0-9]{9}/.test(numContacto)){
     document.getElementById('numContactoHelp').style.visibility="visible";
+    document.getElementById('numContactoMarca').style.visibility="visible";
+    correcto = false;
   }
 
   //Número dividido en dos partes separados por/, la primera parte puede tomar valores 
   //entre 0-9, en la segunda el primer dígito puede tener valores entre 0-2 y el segundo entre 0-9
   if(numLocalizador=="" || !/^[0-9]{1}[/][0-2]{1}[0-9]{1}$/.test(numLocalizador)){
     document.getElementById('numLocalizadorHelp').style.visibility="visible";
+    document.getElementById('numLocalizadorMarca').style.visibility="visible";
     correcto = false;
   }
 
-  /**corregir validacion email */
+  /**validacion email */
   if (email=="" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
     document.getElementById('emailHelp').style.visibility="visible";
+    document.getElementById('emailMarca').style.visibility="visible";
     correcto = false;
   }
 
@@ -78,20 +82,21 @@ function validacion(){
   if (provincia == 0){
       
     document.getElementById('provinciaHelp').style.visibility="visible";
-      
-      
+    document.getElementById('provinciaMarca').style.visibility="visible";
     correcto = false;
   }
 
   //Comprueba que se ha elegido una opción u otra
   if((!tipoProfesor.checked)&&(!tipoEstudiante.checked)){
     document.getElementById('tipoHelp').style.visibility="visible";
+    document.getElementById('tipoMarca').style.visibility="visible";
     correcto=false;
   }
 
   //Comprueba que se ha hecho check en terminos
   if (!terminos.checked){
     document.getElementById('terminosHelp').style.visibility="visible";
+    document.getElementById('terminosMarca').style.visibility="visible";
     correcto = false;
   }
 
@@ -102,6 +107,7 @@ function validacion(){
 
 //Vuelve a ocultar mensajes de error
 function resetear(id){
-  document.getElementById(id+'Help').style.visibility="hidden"; 
+  document.getElementById(id+'Help').style.visibility="hidden";
+  document.getElementById(id+'Marca').style.visibility="hidden";  
   document.getElementById(id).style.borderColor="lightgray";
 }

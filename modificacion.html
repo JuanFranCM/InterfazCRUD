@@ -15,41 +15,41 @@
                 <h3>Editar:</h3>
                 
                 <div class="input-group">
-                    <label for="usuario">Usuario: <span class="error">*</span></label>
+                    <label for="usuario">Usuario: <span id="usuarioMarca" class="error">*</span></label>
                     <input onchange="resetear('usuario')" value="Alf" placeholder="Usuario" type="text"  id="usuario" name="usuario" aria-describedby="usuarioHelp">
                     <div id="usuarioHelp" class="error">Usuario obligatorio</div>
                 </div>
 
                 <div class="input-group">
-                    <label for="nombre">Nombre: <span class="error">*</span></label>
+                    <label for="nombre">Nombre: <span id="nombreMarca" class="error">*</span></label>
                     <input onchange="resetear('nombre')" value="Alfredo Garcia" placeholder="Nombre" type="text"  id="nombre" name="nombre" aria-describedby="nombreHelp">
                     <div id="nombreHelp" class="error">Nombre obligatorio</div>
                 </div>
 
 
                 <div class="input-group">
-                    <label for="numContacto">Número de contacto: <span class="error">*</span></label>
+                    <label for="numContacto">Número de contacto: <span id="numContactoMarca" class="error">*</span></label>
                     <input onchange="resetear('numContacto')" value="637586234" placeholder="Número de contacto" type="text" id="numContacto" name="numContacto" aria-describedby="numContactoHelp">
                     <div id="numContactoHelp" class="error">Número de contacto obligatorio</div>
                 </div>
 
 
                 <div class="input-group">
-                    <label for="numLocalizador">Número localizador<span class="error">*</span></label>
+                    <label for="numLocalizador">Número localizador<span id="numLocalizadorMarca" class="error">*</span></label>
                     <input onchange="resetear('numLocalizador')" value="1/11" placeholder="Ejemplo: 1/01" type="text" id="numLocalizador" name="numLocalizador" aria-describedby="numLocalizadorHelp">
                     <div id="numLocalizadorHelp" class="error">Formato (1-9)/(01-29)</div>
                 </div>
 
 
                 <div class="input-group">
-                    <label for="email">Email: <span class="error">*</span></label>
+                    <label for="email">Email: <span id="emailMarca" class="error">*</span></label>
                     <input onchange="resetear('email')" type="text" value="e-mail@test-email.com" placeholder="Dirección email" id="email" name="email" aria-describedby="emailHelp"/>
                     <div id="emailHelp" class="error">Formato de email erróneo</div>
                 </div>
 
                 
                 <div class="input-group">
-                    <h4>Tipo</h4>
+                    <h4>Tipo<span id="tipoMarca" class="error">*</span></h4>
                     <div class="input-group">
                         <input id="profesor" type="radio" name="tipo" value="profesor" onchange="resetear('tipo')" checked/>
                         <label for="profesor">Profesor</label>
@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="input-group">
-                    <label for="provincia">Provincia: </label>
+                    <label for="provincia">Provincia: <span id="provinciaMarca" class="error">*</span></label>
                     <div id="provinciaHelp" class="error">Seleccione provincia</div>
                     <select onchange="resetear('provincia')" class="input" aria-label="provinciaHelp" id="provincia" name="provincia">
                       <option value="0">-- elige provincia</option>
@@ -75,7 +75,7 @@
                     <input type="checkbox" onchange="resetear('terminos')" class="form-check-input" id="terminos" checked>
                     
                     <label class="form-check-label" for="terminos">
-                        <a id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Acepto los términos y condiciones</a>
+                        <a id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Acepto los términos y condiciones<span id="terminosMarca" class="error">*</span></a>
                     </label>
                     
                     <div id="terminosHelp" class="error">Debe aceptar</div>
