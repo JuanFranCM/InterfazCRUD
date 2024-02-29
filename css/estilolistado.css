@@ -196,6 +196,7 @@ body {
   }
   
   @media (min-width: 460px) {
+    
     td {
       text-align: left;
     }
