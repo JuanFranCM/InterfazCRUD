@@ -14,8 +14,14 @@ function validacion(){
         correcto = false;
     }
 
-    if (password=="" || !/[A-ZÑ]+/.test(password) || !/[a-zñ]+/.test(password) || !/[0-9]+/.test(password) || !/^[\S]{8,15}$/.test(password)){
+    if (password=="" || !/^[\S]{8,15}$/.test(password)){
         document.getElementById('passwordHelp').style.visibility="visible";
+        
+        correcto = false;
+    }
+
+    if(!/[A-ZÑ]+/.test(password) || !/[a-zñ]+/.test(password) || !/[0-9]+/.test(password)){
+        document.getElementById('passwordHelp2').style.visibility="visible";
         correcto = false;
     }
 
@@ -25,5 +31,6 @@ function validacion(){
 
 function resetear(id){
     document.getElementById(id+'Help').style.visibility="hidden"; 
+    document.getElementById(id+'Help2').style.visibility="hidden"; 
     document.getElementById(id).style.borderColor="lightgray";
 }

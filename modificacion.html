@@ -23,14 +23,14 @@
                 <div class="input-group">
                     <label for="nombre">Nombre: <span id="nombreMarca" class="error">*</span></label>
                     <input onchange="resetear('nombre')" value="Alfredo Garcia" placeholder="Nombre" type="text"  id="nombre" name="nombre" aria-describedby="nombreHelp">
-                    <div id="nombreHelp" class="error">Nombre obligatorio</div>
+                    <div id="nombreHelp" class="error">Deben ser más de 2 letras a-z</div>
                 </div>
 
 
                 <div class="input-group">
                     <label for="numContacto">Número de contacto: <span id="numContactoMarca" class="error">*</span></label>
                     <input onchange="resetear('numContacto')" value="637586234" placeholder="Número de contacto" type="text" id="numContacto" name="numContacto" aria-describedby="numContactoHelp">
-                    <div id="numContactoHelp" class="error">Número de contacto obligatorio</div>
+                    <div id="numContactoHelp" class="error">Deben ser 9 dígitos numéricos</div>
                 </div>
 
 
@@ -44,7 +44,7 @@
                 <div class="input-group">
                     <label for="email">Email: <span id="emailMarca" class="error">*</span></label>
                     <input onchange="resetear('email')" type="text" value="e-mail@test-email.com" placeholder="Dirección email" id="email" name="email" aria-describedby="emailHelp"/>
-                    <div id="emailHelp" class="error">Formato de email erróneo</div>
+                    <div id="emailHelp" class="error">Formato example@example.example</div>
                 </div>
 
                 
@@ -52,19 +52,19 @@
                     <h4>Tipo<span id="tipoMarca" class="error">*</span></h4>
                     <div class="input-group">
                         <input id="profesor" type="radio" name="tipo" value="profesor" onchange="resetear('tipo')" checked/>
-                        <label for="profesor">Profesor</label>
+                        <label for="profesor" class="radioOption">Profesor</label>
 
                         <input id="estudiante" type="radio" name="tipo" value="estudiante" onchange="resetear('tipo')"/>
-                        <label for="estudiante">Estudiante</label>
+                        <label for="estudiante" class="radioOption">Estudiante</label>
                     </div>
-                    <div id="tipoHelp" class="error">Elija tipo</div>
+                    <div id="tipoHelp" class="error">Elige tipo</div>
                 </div>
 
                 <div class="input-group">
                     <label for="provincia">Provincia: <span id="provinciaMarca" class="error">*</span></label>
                     <div id="provinciaHelp" class="error">Seleccione provincia</div>
                     <select onchange="resetear('provincia')" class="input" aria-label="provinciaHelp" id="provincia" name="provincia">
-                      <option value="0">-- elige provincia</option>
+                      <option value="0">-- seleccione provincia</option>
                       <option value="29" selected>Málaga</option>
                       <option value="18">Granada</option>
                       <option value="4">Almería</option>

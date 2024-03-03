@@ -13,7 +13,7 @@
         <form action="" method="post" onsubmit="return validacion()">
             <div class="row">
                 <h3>Nueva entrada:</h3>
-                <p class="obligatorio">* Campos obligatorios</p>
+                <p class="obligatorio">* Campos obligatorios/erróneos</p>
                 
                 <div class="input-group">
                     <label for="usuario">Usuario: <span id="usuarioMarca" class="obligatorio">*</span></label>
@@ -66,7 +66,7 @@
                     <div id="provinciaHelp" class="error">Seleccione provincia</div>
                     <select onchange="resetear('provincia')" class="form-select input" aria-label="provinciaHelp"
                       id="provincia" name="provincia">
-                      <option value="0">-- elige provincia</option>
+                      <option value="0">-- seleccione provincia</option>
                       <option value="29">Málaga</option>
                       <option value="18">Granada</option>
                       <option value="4">Almería</option>

@@ -17,21 +17,20 @@
         <div class="row">
           <p>Bienvenido</p>
           <div class="input-group">
-            <div id="usuarioHelp" class="error">Formato de usuario erróneo</div>
             <label for="usuario"><span class="error">*</span></label>
             <input onchange="resetear('usuario')" value="" type="text" placeholder="Usuario" id="usuario" name="usuario" aria-describedby="usuarioHelp"/>
-            
+            <div id="usuarioHelp" class="error">Entre 8-12 caracteres</div>
+
           </div>
 
-          <div class="input-group">
-            <div id="passwordHelp" class="error">Contraseña no válida</div>
+          <div class="input-group">            
             <label for="password"><span class="error">*</span></label>
             <input onchange="resetear('password')" value="" type="password" placeholder="Contraseña" id="password" name="password" aria-describedby="passwordHelp"/>
-            
+            <div id="passwordHelp" class="error">Entre 8-15 caracteres</div>
+            <div id="passwordHelp2" class="error">Al menos 1 a-z, 1 A-Z, 1 0-9</div>
           </div>
 
           <button type="submit" class="boton input">Iniciar sesión</button>
-          <a href="#">Olvidaste tu contraseña?</a>
         </div>
       </form>
     
