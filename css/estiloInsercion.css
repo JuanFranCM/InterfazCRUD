@@ -23,7 +23,10 @@ h3 {
   color: #f0a500;
 }
 label{
-  color: #f0a500;
+  color: #f5d798;
+}
+.radioOption{
+  color: black;
 }
 input,
 input[type="radio"] + label,
@@ -326,6 +329,11 @@ form input {
 .error{
   color: red;
   visibility: hidden;
+}
+
+.obligatorio{
+  color: red;
+  visibility: visible;
 }
 
 
