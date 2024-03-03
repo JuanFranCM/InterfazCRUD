@@ -1,10 +1,10 @@
-/******************************************************/
-/* estilo para conjunto de archivos CRUD              */
-/* archivos insercion, listado, login, modificacion   */
-/*  autor: Juan Francisco Chacon Macias               */
-/******************************************************/
+/*****************************************************/
+/************     Estilo para listado.html    ********/
+/************     Actividad Crud              ********/
+/************     Autor: JuanFranCM            *******/
+/*****************************************************/
+
 /*Error*/
-/*Errores*/
 .error{
   color: red;
   visibility: hidden;
