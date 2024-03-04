@@ -17,40 +17,46 @@
                 
                 <div class="input-group">
                     <label for="usuario">Usuario: <span id="usuarioMarca" class="obligatorio">*</span></label>
-                    <input onchange="resetear('usuario')" placeholder="Usuario obligatorio" type="text" class="" id="usuario" name="usuario" aria-describedby="usuarioHelp">
                     <div id="usuarioHelp" class="error">Usuario obligatorio</div>
+                    <input onchange="resetear('usuario')" placeholder="Usuario obligatorio" type="text" class="" id="usuario" name="usuario" aria-describedby="usuarioHelp">
+                    
                 </div>
 
                 <div class="input-group">
                     <label for="nombre">Nombre: <span id="nombreMarca" class="obligatorio">*</span></label>
-                    <input onchange="resetear('nombre')" placeholder="Nombre" type="text" class="" id="nombre" name="nombre" aria-describedby="nombreHelp">
                     <div id="nombreHelp" class="error">Deben ser más de 2 letras a-z</div>
+                    <input onchange="resetear('nombre')" placeholder="Nombre" type="text" class="" id="nombre" name="nombre" aria-describedby="nombreHelp">
+                    
                 </div>
 
 
                 <div class="input-group">
                     <label for="numContacto">Número de contacto: <span id="numContactoMarca" class="obligatorio">*</span></label>
-                    <input onchange="resetear('numContacto')" placeholder="Número de contacto" type="text" class="" id="numContacto" name="numContacto" aria-describedby="numContactoHelp">
                     <div id="numContactoHelp" class="error">Deben ser 9 dígitos numéricos</div>
+                    <input onchange="resetear('numContacto')" placeholder="Número de contacto" type="text" class="" id="numContacto" name="numContacto" aria-describedby="numContactoHelp">
+                    
                 </div>
 
 
                 <div class="input-group">
                     <label for="numLocalizador">Número localizador<span id="numLocalizadorMarca" class="obligatorio">*</span></label>
-                    <input onchange="resetear('numLocalizador')" placeholder="Ejemplo: 1/01" type="text" class="" id="numLocalizador" name="numLocalizador" aria-describedby="numLocalizadorHelp">
                     <div id="numLocalizadorHelp" class="error">Formato (1-9)/(01-29)</div>
+                    <input onchange="resetear('numLocalizador')" placeholder="Ejemplo: 1/01" type="text" class="" id="numLocalizador" name="numLocalizador" aria-describedby="numLocalizadorHelp">
+                    
                 </div>
 
 
                 <div class="input-group">
                     <label for="email">Email: <span id="emailMarca" class="obligatorio">*</span></label>
-                    <input onchange="resetear('email')" type="text" placeholder="Dirección email" class="" id="email" name="email" aria-describedby="emailHelp"/>
                     <div id="emailHelp" class="error">Formato example@example.example</div>
+                    <input onchange="resetear('email')" type="text" placeholder="Dirección email" class="" id="email" name="email" aria-describedby="emailHelp"/>
+                    
                 </div>
 
                 
                 <div class="input-group">
                     <h4>Tipo<span id="tipoMarca" class="obligatorio">*</span></h4>
+                    <div id="tipoHelp" class="error">Elige tipo</div>
                     <div class="input-group">
                         <input id="profesor" type="radio" name="tipo" value="profesor" onchange="resetear('tipo')"/>
                         <label for="profesor" class="radioOption">Profesor</label>
@@ -58,7 +64,7 @@
                         <input id="estudiante" type="radio" name="tipo" value="estudiante" onchange="resetear('tipo')"/>
                         <label for="estudiante" class="radioOption">Estudiante</label>
                     </div>
-                    <div id="tipoHelp" class="error">Elige tipo</div>
+                    
                 </div>
 
                 <div class="input-group">
@@ -75,13 +81,14 @@
                 </div>
 
                 <div class="form-check input-group">
+                    <div id="terminosHelp" class="error">Debe aceptar</div>
                     <input type="checkbox" onchange="resetear('terminos')" class="form-check-input" id="terminos">
                     
                     <label class="form-check-label" for="terminos">
                         <a id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Acepto los términos y condiciones<span id="terminosMarca" class="obligatorio">*</span></a>
                     </label>
                     
-                    <div id="terminosHelp" class="error">Debe aceptar</div>
+                    
                 </div>
                 <button type="submit" class="boton input">Submit</button>
 

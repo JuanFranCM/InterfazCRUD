@@ -293,6 +293,19 @@ form input {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+
+/*Errores*/
+.error{
+  color: red;
+  visibility: hidden;
+  margin-bottom: 3px;
+}
+
+.obligatorio{
+  color: red;
+  visibility: visible;
+}
+
 /*modal*/
 /* The Modal (background) */
 .modal {
@@ -332,16 +345,7 @@ form input {
   cursor: pointer;
 }
 
-/*Errores*/
-.error{
-  color: red;
-  visibility: hidden;
-}
 
-.obligatorio{
-  color: red;
-  visibility: visible;
-}
 
 
 @media only screen and (max-width: 540px) {
